@@ -1,0 +1,62 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Hasfiyat Altın & Döviz Fiyat API",
+    "version": "1.0.0",
+    "summary": "Türkiye altın, döviz ve parite fiyatları için gerçek zamanlı REST + WebSocket API.",
+    "description": "Hasfiyat API; Harem Altın, Hakan Altın, Mayda Gold, Myakche, Metal Altın, Nadir Döviz, Anlık Altın, Sağlamoğlu Altın, Agora Altın, Fikri Şahin ve Harem V3 dahil 11 canlı kaynaktan gerçek zamanlı altın, döviz ve parite fiyatlarını tek panelden dağıtır. REST ile anlık sorgu; Socket.IO/WebSocket (wss://api.hasfiyat.com/stream) ile kesintisiz canlı akış. Kimlik doğrulama API anahtarı (Bearer veya X-API-Key) iledir ve erişim panelde tanımlı IP/alan adı ile sınırlandırılır.",
+    "contact": { "name": "Hasfiyat", "url": "https://altinapi.hasfiyat.com", "email": "bilgi@hasfiyat.com" },
+    "termsOfService": "https://altinapi.hasfiyat.com/kullanim-kosullari"
+  },
+  "servers": [ { "url": "https://api.hasfiyat.com", "description": "Üretim" } ],
+  "externalDocs": { "description": "Dokümantasyon", "url": "https://altinapi.hasfiyat.com/docs" },
+  "security": [ { "bearerAuth": [] }, { "apiKeyHeader": [] } ],
+  "paths": {
+    "/api/prices": {
+      "get": {
+        "operationId": "getPrices",
+        "summary": "Gerçek zamanlı altın & döviz fiyatlarını getir",
+        "description": "Seçilen kaynaktan (source) güncel altın, döviz ve parite fiyatlarını döndürür. symbols ile yalnızca istenen semboller filtrelenebilir.",
+        "parameters": [
+          { "name": "source", "in": "query", "required": false, "description": "Veri kaynağı.", "schema": { "type": "string", "default": "harem", "enum": ["harem","harem-canli","hakan","mayda","myakche","metal","nadir","anlik","saglamoglu","agora","fikri"] } },
+          { "name": "symbols", "in": "query", "required": false, "description": "Virgülle ayrılmış sembol listesi (ör. HAS,GRAM,CEYREK). Boşsa tüm semboller döner.", "schema": { "type": "string", "examples": ["HAS,GRAM,CEYREK"] } }
+        ],
+        "responses": {
+          "200": { "description": "Başarılı", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PricesResponse" } } } },
+          "401": { "description": "Yetkisiz — geçerli API anahtarı ve panelde tanımlı IP/alan adı gerekir.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "429": { "description": "Aylık istek kotası aşıldı." }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": { "type": "http", "scheme": "bearer", "description": "Authorization: Bearer <API_ANAHTARI>" },
+      "apiKeyHeader": { "type": "apiKey", "in": "header", "name": "X-API-Key", "description": "X-API-Key: <API_ANAHTARI>" }
+    },
+    "schemas": {
+      "Price": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string", "description": "Sembol adı", "examples": ["HAS ALTIN"] },
+          "buy": { "type": "string", "description": "Alış fiyatı (TR biçimi)", "examples": ["6.481,39"] },
+          "sell": { "type": "string", "description": "Satış fiyatı (TR biçimi)", "examples": ["6.811,20"] }
+        },
+        "required": ["title","buy","sell"]
+      },
+      "PricesResponse": {
+        "type": "object",
+        "properties": {
+          "source": { "type": "string", "examples": ["harem"] },
+          "count": { "type": "integer", "examples": [36] },
+          "data": { "type": "array", "items": { "$ref": "#/components/schemas/Price" } }
+        },
+        "required": ["source","data"]
+      },
+      "Error": {
+        "type": "object",
+        "properties": { "error": { "type": "string" }, "reason": { "type": "string" } }
+      }
+    }
+  }
+}
