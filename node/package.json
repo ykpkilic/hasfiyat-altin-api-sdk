@@ -1,0 +1,11 @@
+{
+  "name": "hasfiyat-altin-api",
+  "version": "1.0.0",
+  "description": "Hasfiyat Altın & Döviz Fiyat API resmi Node.js istemcisi — 11 kaynaktan gerçek zamanlı altın, döviz ve parite fiyatları (REST + WebSocket).",
+  "main": "index.js",
+  "scripts": { "test": "node test.js" },
+  "keywords": ["altın api","gold price api","döviz api","turkey gold api","harem altın api","hasfiyat","gram altın","altin","forex","gold"],
+  "homepage": "https://altinapi.hasfiyat.com",
+  "license": "MIT",
+  "author": "Hasfiyat"
+}
