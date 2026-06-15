@@ -1,0 +1,10 @@
+{
+  "name": "hasfiyat/altin-api",
+  "description": "Hasfiyat Altın & Döviz Fiyat API resmi PHP istemcisi — 11 kaynak, REST + WebSocket.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://altinapi.hasfiyat.com",
+  "keywords": ["altın api","gold price api","döviz api","harem altın api","hasfiyat","gram altın"],
+  "require": { "php": ">=7.4", "ext-curl": "*", "ext-json": "*" },
+  "autoload": { "psr-4": { "Hasfiyat\\": "src/" }, "files": ["src/Client.php"] }
+}
