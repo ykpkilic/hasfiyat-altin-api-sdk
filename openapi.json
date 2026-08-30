@@ -3,8 +3,8 @@
   "info": {
     "title": "Hasfiyat Altın & Döviz Fiyat API",
     "version": "1.0.0",
-    "summary": "Türkiye altın, döviz ve parite fiyatları için gerçek zamanlı REST + WebSocket API.",
-    "description": "Hasfiyat API; Harem Altın, Hakan Altın, Mayda Gold, Myakche, Metal Altın, Nadir Döviz, Anlık Altın, Sağlamoğlu Altın, Agora Altın, Fikri Şahin ve Harem V3 dahil 11 canlı kaynaktan gerçek zamanlı altın, döviz ve parite fiyatlarını tek panelden dağıtır. REST ile anlık sorgu; Socket.IO/WebSocket (wss://api.hasfiyat.com/stream) ile kesintisiz canlı akış. Kimlik doğrulama API anahtarı (Bearer veya X-API-Key) iledir ve erişim panelde tanımlı IP/alan adı ile sınırlandırılır.",
+    "summary": "Türkiye altın, döviz ve parite fiyatları için canlı REST + WebSocket API.",
+    "description": "Hasfiyat API; Harem Altın, Hakan Altın, Mayda Gold, Myakche, Metal Altın, Nadir Döviz, Anlık Altın, Sağlamoğlu Altın, Agora Altın, Fikri Şahin ve Harem V3 dahil birden fazla canlı kaynaktan canlı altın, döviz ve parite fiyatlarını tek panelden dağıtır. REST ile anlık sorgu; Socket.IO/WebSocket (wss://api.hasfiyat.com/stream) ile kesintisiz canlı akış. Kimlik doğrulama API anahtarı (Bearer veya X-API-Key) iledir ve erişim panelde tanımlı IP/alan adı ile sınırlandırılır.",
     "contact": { "name": "Hasfiyat", "url": "https://altinapi.hasfiyat.com", "email": "bilgi@hasfiyat.com" },
     "termsOfService": "https://altinapi.hasfiyat.com/kullanim-kosullari"
   },
@@ -15,7 +15,7 @@
     "/api/prices": {
       "get": {
         "operationId": "getPrices",
-        "summary": "Gerçek zamanlı altın & döviz fiyatlarını getir",
+        "summary": "Canlı altın & döviz fiyatlarını getir",
         "description": "Seçilen kaynaktan (source) güncel altın, döviz ve parite fiyatlarını döndürür. symbols ile yalnızca istenen semboller filtrelenebilir.",
         "parameters": [
           { "name": "source", "in": "query", "required": false, "description": "Veri kaynağı.", "schema": { "type": "string", "default": "harem", "enum": ["harem","harem-canli","hakan","mayda","myakche","metal","nadir","anlik","saglamoglu","agora","fikri"] } },

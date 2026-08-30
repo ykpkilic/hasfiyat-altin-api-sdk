@@ -1,6 +1,6 @@
 # Hasfiyat Altın & Döviz Fiyat API — Resmi SDK'lar
 
-[Hasfiyat API](https://altinapi.hasfiyat.com), Harem Altın, Hakan Altın, Mayda Gold dahil **11 canlı kaynaktan** gerçek zamanlı **altın, döviz ve parite** fiyatlarını tek API'de sunar. REST ve WebSocket (Socket.IO) erişimi, IP/alan adı yetkilendirmesi ve otomatik yük devretme yerleşiktir. Trendyol, Hepsiburada, WooCommerce dahil 15 pazaryerine otomatik fiyat gönderimi içerir.
+[Hasfiyat API](https://altinapi.hasfiyat.com), Harem Altın, Hakan Altın, Mayda Gold dahil **birden fazla canlı kaynaktan** canlı **altın, döviz ve parite** fiyatlarını tek API'de sunar. REST ve WebSocket (Socket.IO) erişimi, IP/alan adı yetkilendirmesi ve otomatik yük devretme yerleşiktir. Trendyol, Hepsiburada, WooCommerce dahil pazaryerlerine otomatik fiyat gönderimi içerir.
 
 Bu repo; **Node.js, Python, PHP ve Go** için resmi istemcileri ve OpenAPI 3.1 tanımını içerir.
 
@@ -24,10 +24,10 @@ Yanıt:
 ```
 
 ## Veri Kaynakları
-`harem`, `harem-canli`, `hakan`, `mayda`, `myakche`, `metal`, `nadir`, `anlik`, `saglamoglu`, `agora`, `fikri` (11 kaynak — otomatik yük devretme).
+`harem`, `harem-canli`, `hakan`, `mayda`, `myakche`, `metal`, `nadir`, `anlik`, `saglamoglu`, `agora`, `fikri` (otomatik yük devretme).
 
 ## Canlı Akış (WebSocket)
-`wss://api.hasfiyat.com/stream` — Socket.IO `gold_prices` olayı ile milisaniye gecikmeli akış.
+`wss://api.hasfiyat.com/stream` — Socket.IO `gold_prices` olayı ile canlı akış.
 
 ## Bağlantılar
 - Dokümantasyon: https://altinapi.hasfiyat.com/docs

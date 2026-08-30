@@ -1,6 +1,6 @@
 # hasfiyat-altin-api (Node.js)
 
-Hasfiyat **Altın & Döviz Fiyat API** resmi Node.js istemcisi. Harem Altın, Hakan Altın, Mayda Gold dahil **11 canlı kaynaktan** gerçek zamanlı altın, döviz ve parite fiyatları.
+Hasfiyat **Altın & Döviz Fiyat API** resmi Node.js istemcisi. Harem Altın, Hakan Altın, Mayda Gold dahil **birden fazla canlı kaynaktan** canlı altın, döviz ve parite fiyatları.
 
 ## Kurulum
 ```bash

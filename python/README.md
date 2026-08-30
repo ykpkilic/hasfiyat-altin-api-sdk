@@ -1,6 +1,6 @@
 # hasfiyat-altin-api (Python)
 
-Hasfiyat **Altın & Döviz Fiyat API** resmi Python istemcisi — 11 canlı kaynaktan gerçek zamanlı altın, döviz ve parite fiyatları.
+Hasfiyat **Altın & Döviz Fiyat API** resmi Python istemcisi — birden fazla canlı kaynaktan canlı altın, döviz ve parite fiyatları.
 
 ## Kurulum
 ```bash

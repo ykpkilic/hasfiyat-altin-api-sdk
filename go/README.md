@@ -1,6 +1,6 @@
 # altin-api-go (Go)
 
-Hasfiyat **Altın & Döviz Fiyat API** resmi Go istemcisi — 11 canlı kaynak.
+Hasfiyat **Altın & Döviz Fiyat API** resmi Go istemcisi — birden fazla canlı kaynak.
 
 ## Kurulum
 ```bash

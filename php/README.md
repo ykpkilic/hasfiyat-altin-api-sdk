@@ -1,6 +1,6 @@
 # hasfiyat/altin-api (PHP)
 
-Hasfiyat **Altın & Döviz Fiyat API** resmi PHP istemcisi — 11 canlı kaynak.
+Hasfiyat **Altın & Döviz Fiyat API** resmi PHP istemcisi — birden fazla canlı kaynak.
 
 ## Kurulum
 ```bash

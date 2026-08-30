@@ -1,6 +1,6 @@
 {
   "name": "hasfiyat/altin-api",
-  "description": "Hasfiyat Altın & Döviz Fiyat API resmi PHP istemcisi — 11 kaynak, REST + WebSocket.",
+  "description": "Hasfiyat Altın & Döviz Fiyat API resmi PHP istemcisi — birden fazla kaynak, REST + WebSocket.",
   "type": "library",
   "license": "MIT",
   "homepage": "https://altinapi.hasfiyat.com",
