@@ -1,10 +1,12 @@
 # hasfiyat-altin-api (Python)
 
-Hasfiyat **Altın & Döviz Fiyat API** resmi Python istemcisi — birden fazla canlı kaynaktan canlı altın, döviz ve parite fiyatları.
+**Hasfiyat Altın API** resmi Python istemcisi — birden fazla canlı kaynaktan canlı altın, döviz ve parite fiyatları.
 
 ## Kurulum
+Paket PyPI'da **yayımlanmadı**; paket adıyla pip kurulumu yapmayın. Doğrudan bu repodan kurun:
+
 ```bash
-pip install hasfiyat-altin-api
+pip install "git+https://github.com/ykpkilic/hasfiyat-altin-api-sdk#subdirectory=python"
 ```
 
 ## Kullanım
