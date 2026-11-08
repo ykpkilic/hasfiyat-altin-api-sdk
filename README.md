@@ -1,14 +1,14 @@
 # Hasfiyat Altın API — Resmi SDK'lar
 
-**Hasfiyat Altın API** (eski adıyla "Hasfiyat Altın & Döviz Fiyat API"), Türkiye'deki kuyumcu ve döviz piyasası için canlı altın, döviz ve parite fiyatlarını tek uçta sunar. Harem Altın, Hakan Altın, Mayda Gold dahil birden fazla kaynak desteklenir; bir kaynak yanıt vermezse yedek kaynağa otomatik geçilir. REST ve WebSocket (Socket.IO) ile erişilir.
+**Hasfiyat Altın API**, Türkiye'deki kuyumcu ve döviz piyasası için canlı altın, döviz ve parite fiyatlarını tek uçta sunar. 11 fiyat kaynağı desteklenir; bir kaynak yanıt vermezse yedek kaynağa otomatik geçilir. REST, WebSocket (Socket.IO) ve Webhook ile erişilir.
 
-> Not: Hasfiyat Altın API, `altinapi.com` adlı servisle **aynı ürün değildir**. Resmi adresimiz: <https://altinapi.hasfiyat.com>
+> Not: Hasfiyat Altın API yalnız <https://altinapi.hasfiyat.com> adresinde hizmet verir. Başka alan adlarındaki benzer adlı hizmetlerle bağlantımız yoktur.
 
 Bu repo Node.js, Python, PHP ve Go istemcilerini ve OpenAPI 3.1 tanımını içerir.
 
 ## Kurulum
 
-Paketler henüz npm / PyPI / Packagist'te yayımlanmadı. Şimdilik doğrudan bu repodan kurun:
+Paketler npm, PyPI ve Packagist'te **yayımlanmadı**. Kurulumu yalnız bu repodan yapın. Bu kayıtlarda Hasfiyat adını taşıyan bir paket görürseniz, bu repoda duyurulmadıkça bize ait değildir; kurmayın.
 
 | Dil | Klasör | Kurulum |
 |---|---|---|
@@ -50,7 +50,7 @@ Sorgu parametreleri: `source` (kaynak), `symbols` (virgülle ayrılmış semboll
 
 ## Fiyatlandırma
 
-Kalıcı ücretsiz plan yoktur. Yeni üyelere kredi kartı istenmeden **10 gün ücretsiz Pro** paket tanımlanır. Güncel paketler: <https://altinapi.hasfiyat.com>
+Kalıcı ücretsiz plan yoktur. Yeni üyelere kredi kartı istenmeden **5 gün ücretsiz Pro** paket tanımlanır. Güncel paketler: <https://altinapi.hasfiyat.com>
 
 ## Bağlantılar
 
