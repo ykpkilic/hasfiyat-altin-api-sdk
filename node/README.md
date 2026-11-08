@@ -1,15 +1,18 @@
 # hasfiyat-altin-api (Node.js)
 
-Hasfiyat **Altın & Döviz Fiyat API** resmi Node.js istemcisi. Harem Altın, Hakan Altın, Mayda Gold dahil **birden fazla canlı kaynaktan** canlı altın, döviz ve parite fiyatları.
+**Hasfiyat Altın API** resmi Node.js istemcisi. **11 fiyat kaynağından** canlı altın, döviz ve parite fiyatları.
 
 ## Kurulum
+Paket npm'de **yayımlanmadı**; npm üzerinden kurmaya çalışmayın. Bu repodaki `node/` klasörünü projenize kopyalayın:
+
 ```bash
-npm install hasfiyat-altin-api
+git clone https://github.com/ykpkilic/hasfiyat-altin-api-sdk
+cp -r hasfiyat-altin-api-sdk/node ./hasfiyat-altin-api
 ```
 
 ## Kullanım
 ```js
-const { HasfiyatClient, parseTrNumber } = require('hasfiyat-altin-api');
+const { HasfiyatClient, parseTrNumber } = require('./hasfiyat-altin-api');
 const client = new HasfiyatClient('API_ANAHTARINIZ', { source: 'harem' });
 
 const res = await client.getPrices({ symbols: ['HAS', 'GRAM', 'CEYREK'] });
