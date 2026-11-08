@@ -1,10 +1,12 @@
 # hasfiyat/altin-api (PHP)
 
-Hasfiyat **Altın & Döviz Fiyat API** resmi PHP istemcisi — birden fazla canlı kaynak.
+**Hasfiyat Altın API** resmi PHP istemcisi — birden fazla canlı kaynak.
 
 ## Kurulum
-```bash
-composer require hasfiyat/altin-api
+Paket Packagist'te **yayımlanmadı**; Composer ile paket adıyla kurmaya çalışmayın. `php/src/Client.php` dosyasını projenize kopyalayıp dahil edin:
+
+```php
+require __DIR__ . '/Client.php';
 ```
 
 ## Kullanım
